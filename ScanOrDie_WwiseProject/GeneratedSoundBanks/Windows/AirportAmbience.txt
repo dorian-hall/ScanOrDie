@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4074573783	Play_AirportAmbience			\Default Work Unit\Play_AirportAmbience	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	396762767	AirportAmbience	D:\unity\ScanOrDie\ScanOrDie_WwiseProject\.cache\Windows\SFX\AirportAmbience_E5483734.wem		\Actor-Mixer Hierarchy\Default Work Unit\AirportVibe\AirportAmbience		6002680
+

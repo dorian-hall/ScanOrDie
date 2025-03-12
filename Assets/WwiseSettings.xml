@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<WwiseSettings>
+    <CopySoundBanksAsPreBuildStep>true</CopySoundBanksAsPreBuildStep>
+    <GenerateSoundBanksAsPreBuildStep>false</GenerateSoundBanksAsPreBuildStep>
+    <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
+    <CreatedPicker>true</CreatedPicker>
+    <CreateWwiseGlobal>true</CreateWwiseGlobal>
+    <CreateWwiseListener>true</CreateWwiseListener>
+    <ObjectReferenceAutoCleanup>true</ObjectReferenceAutoCleanup>
+    <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
+    <ShowSpatialAudioWarningMsg>true</ShowSpatialAudioWarningMsg>
+    <WwiseInstallationPathMac></WwiseInstallationPathMac>
+    <WwiseInstallationPathWindows>C:\Program Files (x86)\Audiokinetic\Wwise2022.1.15.8501</WwiseInstallationPathWindows>
+    <WwiseProjectPath>../ScanOrDie_WwiseProject/ScanOrDie_WwiseProject.wproj</WwiseProjectPath>
+    <UseWaapi>true</UseWaapi>
+    <WaapiPort>8080</WaapiPort>
+    <WaapiIP>127.0.0.1</WaapiIP>
+    <XMLTranslatorTimeout>10</XMLTranslatorTimeout>
+    <WaapiTranslatorTimeout>0</WaapiTranslatorTimeout>
+</WwiseSettings>

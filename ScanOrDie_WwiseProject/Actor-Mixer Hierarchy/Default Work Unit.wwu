@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B6CC2797-5118-4C43-953F-003A25277C68}" SchemaVersion="110">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{B6CC2797-5118-4C43-953F-003A25277C68}" PersistMode="Standalone">
+			<ChildrenList>
+				<ActorMixer Name="AirportVibe" ID="{7F9BF040-8A47-4B00-80BC-663DEEA68084}" ShortID="37032519">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="AirportAmbience" ID="{E5708A1F-7847-4C26-B9FC-0C6E1DB95866}" ShortID="224201800">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="AirportAmbience" ID="{ECAF957E-6790-4AB2-A66A-F38EE87C8134}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="31.2916294967296"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>AirportAmbience.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="396762767"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="AirportAmbience" ID="{ECAF957E-6790-4AB2-A66A-F38EE87C8134}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
