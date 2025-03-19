@@ -4,6 +4,32 @@
 		<WorkUnit Name="Default Work Unit" ID="{B6CC2797-5118-4C43-953F-003A25277C68}" PersistMode="Standalone">
 			<ChildrenList>
 				<ActorMixer Name="AirportVibe" ID="{7F9BF040-8A47-4B00-80BC-663DEEA68084}" ShortID="37032519">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="OutputBusHighpass" Type="int16">
+							<ValueList>
+								<Value>35</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OutputBusLowpass" Type="int16">
+							<ValueList>
+								<Value>45</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{2DBC8491-11FB-4E6D-8F12-063DB91B37B3}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="200"/>
+											<Property Name="Min" Type="Real64" Value="-200"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
@@ -14,6 +40,16 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="AirportAmbience" ID="{E5708A1F-7847-4C26-B9FC-0C6E1DB95866}" ShortID="224201800">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{DA1CF2CB-5CBF-4C93-A7FC-405944384CED}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
@@ -25,8 +61,10 @@
 							<ChildrenList>
 								<AudioFileSource Name="AirportAmbience" ID="{ECAF957E-6790-4AB2-A66A-F38EE87C8134}">
 									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="1.527"/>
+										<Property Name="LoopEnd" Type="Real64" Value="31.148750715859"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="31.2916294967296"/>
+										<Property Name="TrimEnd" Type="Real64" Value="31.2632130686826"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>AirportAmbience.wav</AudioFile>
@@ -41,6 +79,23 @@
 						</Sound>
 					</ChildrenList>
 				</ActorMixer>
+				<Folder Name="ScannerNoise" ID="{96A5A833-BB3F-4FE0-A462-8F0720C0B96F}" ShortID="238707289">
+					<ChildrenList>
+						<RandomSequenceContainer Name="BeepSequence" ID="{5FD984A1-BECF-4A94-9DDC-B852FA47A6CB}" ShortID="1029421088">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+								</Reference>
+							</ReferenceList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

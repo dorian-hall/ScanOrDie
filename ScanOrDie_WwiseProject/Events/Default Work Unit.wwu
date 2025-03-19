@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{9DCF07A8-B075-4113-8A07-9B6B5D213D7D}" SchemaVersion="110">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{9DCF07A8-B075-4113-8A07-9B6B5D213D7D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{9DCF07A8-B075-4113-8A07-9B6B5D213D7D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_AirportAmbience" ID="{FC5278DA-2161-4253-AEF5-0DBFC9392E83}">
+					<ChildrenList>
+						<Action Name="" ID="{773EC69C-7D8D-4B14-B214-5323650790EB}" ShortID="411388552">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AirportAmbience" ID="{E5708A1F-7847-4C26-B9FC-0C6E1DB95866}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

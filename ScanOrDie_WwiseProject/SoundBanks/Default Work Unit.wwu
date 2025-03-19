@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F93C2252-1227-40E3-84CA-E0C2CB745320}" SchemaVersion="110">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{F93C2252-1227-40E3-84CA-E0C2CB745320}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F93C2252-1227-40E3-84CA-E0C2CB745320}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="AirportAmbience" ID="{31D2778E-41CC-449F-84D3-0DA440ACC09C}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_AirportAmbience" ID="{FC5278DA-2161-4253-AEF5-0DBFC9392E83}" WorkUnitID="{9DCF07A8-B075-4113-8A07-9B6B5D213D7D}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>
