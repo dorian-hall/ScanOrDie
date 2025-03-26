@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{7550CAD7-56E1-74B4-E6A7-8A2BECFFC2A0}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{8A4CEE95-227C-453F-D174-402910DF0AE9}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -77,6 +77,10 @@
 				<File Id="299186621" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Toys, Misc, Toy Cars, Metal, Pick Up From Table SND29439.wav</ShortName>
 					<CachePath>SFX/Toys, Misc, Toy Cars, Metal, Pick Up From Table SND29439_10C4C929.wem</CachePath>
+				</File>
+				<File Id="393060965" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2.wav</ShortName>
+					<CachePath>SFX/Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2_19D01FAF.wem</CachePath>
 				</File>
 				<File Id="396762767" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AirportAmbience.wav</ShortName>
@@ -165,6 +169,7 @@
 					<MediaRefs>
 						<MediaRef Id="82722839"/>
 						<MediaRef Id="181301099"/>
+						<MediaRef Id="393060965"/>
 						<MediaRef Id="396762767"/>
 						<MediaRef Id="995767769"/>
 					</MediaRefs>
@@ -194,35 +199,35 @@
 						<MediaRef Id="168313656"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2115165411" Name="PlayPickupBomb" DurationType="OneShot" DurationMin="0.35681868" DurationMax="0.8535717">
+				<Event Id="2115165411" Name="PlayPickupBomb" DurationType="OneShot" DurationMin="0.24203087" DurationMax="1.2583945">
 					<MediaRefs>
 						<MediaRef Id="461754974"/>
 						<MediaRef Id="971344149"/>
 						<MediaRef Id="996682008"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2998817953" Name="PlayPickupCloth" DurationType="OneShot" DurationMin="0.72048956" DurationMax="0.99053127">
+				<Event Id="2998817953" Name="PlayPickupCloth" DurationType="OneShot" DurationMin="0.67965883" DurationMax="1.0500377">
 					<MediaRefs>
 						<MediaRef Id="578373534"/>
 						<MediaRef Id="915393983"/>
 						<MediaRef Id="1026676219"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1492217638" Name="PlayPickupGlas" DurationType="OneShot" DurationMin="0.2673021" DurationMax="0.44551563">
+				<Event Id="1492217638" Name="PlayPickupGlas" DurationType="OneShot" DurationMin="0.15001823" DurationMax="0.7938186">
 					<MediaRefs>
 						<MediaRef Id="91748936"/>
 						<MediaRef Id="567136279"/>
 						<MediaRef Id="585805240"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1564899836" Name="PlayPickupMetal" DurationType="OneShot" DurationMin="0.57308334" DurationMax="0.73983335">
+				<Event Id="1564899836" Name="PlayPickupMetal" DurationType="OneShot" DurationMin="0.32163215" DurationMax="1.3182331">
 					<MediaRefs>
 						<MediaRef Id="184787192"/>
 						<MediaRef Id="656372241"/>
 						<MediaRef Id="903793539"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3518151353" Name="PlayPickupPlastic" DurationType="OneShot" DurationMin="0.4356979" DurationMax="0.8091146">
+				<Event Id="3518151353" Name="PlayPickupPlastic" DurationType="OneShot" DurationMin="0.24452718" DurationMax="1.4416783">
 					<MediaRefs>
 						<MediaRef Id="188187979"/>
 						<MediaRef Id="299186621"/>
@@ -254,8 +259,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-
-
 	<FileHash>{672EB92E-2776-5D6B-5832-7821A863191D}</FileHash>
-	 7fbb73609f90855aa8e1a1ad1f7cdab8622deb90
 </SoundBanksInfo>
