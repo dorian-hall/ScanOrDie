@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 443e8d66414fa94a9a0beb8c6b759fc2
     GuidInternal: 
-    m_lastTime: -8584597989618813929
+    m_lastTime: -8584585946023910277
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: c234e32edc712e41b77ac845303e3529
     GuidInternal: 
-    m_lastTime: -8584597989619890955
+    m_lastTime: -8584585946025231294
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 52223cf92712e34084cae0c2cb745320
     GuidInternal: 
-    m_lastTime: -8584591908628854767
+    m_lastTime: -8584585920301720836
     List:
     - name: AirportAmbience
       guid: 8e77d231cc419f4484d30da440acc09c
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a807cf9d75b013418a079b6b5d213d7d
     GuidInternal: 
-    m_lastTime: -8584591912467434829
+    m_lastTime: -8584585920305438725
     List:
     - name: Ambience
       guid: c0a3e4f6e4d89845b77100c410cd6125
@@ -113,9 +113,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Conveyorbelt
-      guid: e3d8a9106b9a7b4390f9d4ae6acdf7b3
-      id: 1687970961
+    - name: Detector
+      guid: 025f0033ce054742aa47061891dd0796
+      id: 198272423
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -123,33 +123,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: a807cf9d75b013418a079b6b5d213d7d
-      - ElementName: Ambience
+      - ElementName: Detector
         ObjectType: 4
-        guid: c0a3e4f6e4d89845b77100c410cd6125
-      - ElementName: Conveyorbelt
-        ObjectType: 3
-        guid: e3d8a9106b9a7b4390f9d4ae6acdf7b3
-      Path: Events\Default Work Unit\Ambience\Conveyorbelt
-      maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Pickup
-      guid: acf61e9740121442911d496d894c74de
-      id: 3978245845
-      PathAndIcons:
-      - ElementName: Events
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: a807cf9d75b013418a079b6b5d213d7d
-      - ElementName: PickUpItem
-        ObjectType: 4
-        guid: c3b3ecf147a7e145b4c1e0b503386c82
-      - ElementName: Pickup
-        ObjectType: 3
-        guid: acf61e9740121442911d496d894c74de
-      Path: Events\Default Work Unit\PickUpItem\Pickup
+        guid: 025f0033ce054742aa47061891dd0796
+      Path: Events\Default Work Unit\Detector
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -190,9 +167,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: TheDetector
+    - name: PlayDetector
       guid: 53943650cd2d374eab0219d639d1f078
-      id: 2465096132
+      id: 4233473501
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -200,10 +177,227 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: a807cf9d75b013418a079b6b5d213d7d
-      - ElementName: TheDetector
+      - ElementName: Detector
+        ObjectType: 4
+        guid: 025f0033ce054742aa47061891dd0796
+      - ElementName: PlayDetector
         ObjectType: 3
         guid: 53943650cd2d374eab0219d639d1f078
-      Path: Events\Default Work Unit\TheDetector
+      Path: Events\Default Work Unit\Detector\PlayDetector
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: PlayExplosionSound
+      guid: 3179783ad32f914eb9a716e88624626d
+      id: 1506756141
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: SuccessOrFailure
+        ObjectType: 4
+        guid: 6e9d4d34ff873e46840fcff88fefa620
+      - ElementName: PlayExplosionSound
+        ObjectType: 3
+        guid: 3179783ad32f914eb9a716e88624626d
+      Path: Events\Default Work Unit\SuccessOrFailure\PlayExplosionSound
+      maxAttenuation: 0
+      maxDuration: 9.508692
+      minDuration: 2.6689281
+    - name: PlayFailsound
+      guid: 01813f63b5951544b4e9d11c87158a39
+      id: 2004042764
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: RightOrWrongTarget
+        ObjectType: 4
+        guid: 712a9c9ef5821e46837bbdd69151340c
+      - ElementName: PlayFailsound
+        ObjectType: 3
+        guid: 01813f63b5951544b4e9d11c87158a39
+      Path: Events\Default Work Unit\RightOrWrongTarget\PlayFailsound
+      maxAttenuation: 0
+      maxDuration: 0.8070104
+      minDuration: 0.8070104
+    - name: PlayPickupBomb
+      guid: acf61e9740121442911d496d894c74de
+      id: 2115165411
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: PickUpItem
+        ObjectType: 4
+        guid: c3b3ecf147a7e145b4c1e0b503386c82
+      - ElementName: PlayPickupBomb
+        ObjectType: 3
+        guid: acf61e9740121442911d496d894c74de
+      Path: Events\Default Work Unit\PickUpItem\PlayPickupBomb
+      maxAttenuation: 0
+      maxDuration: 0.8535717
+      minDuration: 0.35681868
+    - name: PlayPickupCloth
+      guid: 8303f3a83713ad4e9cc23004c390e2f4
+      id: 2998817953
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: PickUpItem
+        ObjectType: 4
+        guid: c3b3ecf147a7e145b4c1e0b503386c82
+      - ElementName: PlayPickupCloth
+        ObjectType: 3
+        guid: 8303f3a83713ad4e9cc23004c390e2f4
+      Path: Events\Default Work Unit\PickUpItem\PlayPickupCloth
+      maxAttenuation: 0
+      maxDuration: 0.99053127
+      minDuration: 0.72048956
+    - name: PlayPickupGlas
+      guid: 8bd7a2ad60242a49bfa3e6c6b1324a56
+      id: 1492217638
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: PickUpItem
+        ObjectType: 4
+        guid: c3b3ecf147a7e145b4c1e0b503386c82
+      - ElementName: PlayPickupGlas
+        ObjectType: 3
+        guid: 8bd7a2ad60242a49bfa3e6c6b1324a56
+      Path: Events\Default Work Unit\PickUpItem\PlayPickupGlas
+      maxAttenuation: 0
+      maxDuration: 0.44551563
+      minDuration: 0.2673021
+    - name: PlayPickupMetal
+      guid: 05f0f6712b9dca48b79c8e415aeefe48
+      id: 1564899836
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: PickUpItem
+        ObjectType: 4
+        guid: c3b3ecf147a7e145b4c1e0b503386c82
+      - ElementName: PlayPickupMetal
+        ObjectType: 3
+        guid: 05f0f6712b9dca48b79c8e415aeefe48
+      Path: Events\Default Work Unit\PickUpItem\PlayPickupMetal
+      maxAttenuation: 0
+      maxDuration: 0.73983335
+      minDuration: 0.57308334
+    - name: PlayPickupPlastic
+      guid: a1a1902901d67147afd6569e79dc4ace
+      id: 3518151353
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: PickUpItem
+        ObjectType: 4
+        guid: c3b3ecf147a7e145b4c1e0b503386c82
+      - ElementName: PlayPickupPlastic
+        ObjectType: 3
+        guid: a1a1902901d67147afd6569e79dc4ace
+      Path: Events\Default Work Unit\PickUpItem\PlayPickupPlastic
+      maxAttenuation: 0
+      maxDuration: 0.8091146
+      minDuration: 0.4356979
+    - name: PlaySuccesssound
+      guid: c2b5f04e3312ac4183c9002eb43c2bc8
+      id: 2096049309
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: RightOrWrongTarget
+        ObjectType: 4
+        guid: 712a9c9ef5821e46837bbdd69151340c
+      - ElementName: PlaySuccesssound
+        ObjectType: 3
+        guid: c2b5f04e3312ac4183c9002eb43c2bc8
+      Path: Events\Default Work Unit\RightOrWrongTarget\PlaySuccesssound
+      maxAttenuation: 0
+      maxDuration: 0.7783125
+      minDuration: 0.7783125
+    - name: PlayVictorySound
+      guid: e50ae47a89aef64ab25f93b19f60c05f
+      id: 2419550644
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: SuccessOrFailure
+        ObjectType: 4
+        guid: 6e9d4d34ff873e46840fcff88fefa620
+      - ElementName: PlayVictorySound
+        ObjectType: 3
+        guid: e50ae47a89aef64ab25f93b19f60c05f
+      Path: Events\Default Work Unit\SuccessOrFailure\PlayVictorySound
+      maxAttenuation: 0
+      maxDuration: 2.5166771
+      minDuration: 2.5166771
+    - name: RightOrWrongTarget
+      guid: 712a9c9ef5821e46837bbdd69151340c
+      id: 1335813838
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: RightOrWrongTarget
+        ObjectType: 4
+        guid: 712a9c9ef5821e46837bbdd69151340c
+      Path: Events\Default Work Unit\RightOrWrongTarget
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: SuccessOrFailure
+      guid: 6e9d4d34ff873e46840fcff88fefa620
+      id: 3449928893
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: SuccessOrFailure
+        ObjectType: 4
+        guid: 6e9d4d34ff873e46840fcff88fefa620
+      Path: Events\Default Work Unit\SuccessOrFailure
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -219,7 +413,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 957f8ea5e4668b4687c0d97d7bc6a20d
     GuidInternal: 
-    m_lastTime: -8584591924800959611
+    m_lastTime: -8584585920305426600
     List:
     - name: BeepSpeed
       guid: f6e5b8347651f34db0aafe13ce182710
@@ -247,7 +441,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 18ff2ef10b3d4c4e864dd3af0e6b9d97
     GuidInternal: 
-    m_lastTime: -8584591908629035119
+    m_lastTime: -8584585920301720836
     List:
     - name: ObjectType
       guid: c2eef3f3be0eb548b81cdf5b01992f6d
@@ -327,7 +521,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: d9fe5ddbb746484680b28d6fe523d414
     GuidInternal: 
-    m_lastTime: -8584597989620225044
+    m_lastTime: -8584585946023920325
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -341,11 +535,11 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 8ad03e175e94924e87240f008d7947ec
     GuidInternal: 
-    m_lastTime: -8584597989618127879
+    m_lastTime: -8584585946023920325
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0a0000000b000000
+  ExpandedFileSystemItemIds: 02000000030000000400000005000000090000000a0000000b00000014000000160000001c0000001f000000
+  ExpandedWaapiItemIds: 02000000030000000a000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 

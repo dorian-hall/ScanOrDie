@@ -9,7 +9,7 @@ public class Bomb : MonoBehaviour
     
     private void OnDestroy()
     {
-        if (!Defused) Debug.Log("Explode");
-        else Debug.Log("Defused");
+        if (!Defused) AudioManager.instance.Explosion?.Post(AudioManager.instance.gameObject);
+        else AudioManager.instance.Defused?.Post(AudioManager.instance.gameObject);
     }
 }
