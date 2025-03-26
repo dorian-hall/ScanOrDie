@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a807cf9d75b013418a079b6b5d213d7d
     GuidInternal: 
-    m_lastTime: -8584585920305438725
+    m_lastTime: -8584585882497763609
     List:
     - name: Ambience
       guid: c0a3e4f6e4d89845b77100c410cd6125
@@ -245,8 +245,8 @@ MonoBehaviour:
         guid: acf61e9740121442911d496d894c74de
       Path: Events\Default Work Unit\PickUpItem\PlayPickupBomb
       maxAttenuation: 0
-      maxDuration: 0.8535717
-      minDuration: 0.35681868
+      maxDuration: 1.2583945
+      minDuration: 0.24203087
     - name: PlayPickupCloth
       guid: 8303f3a83713ad4e9cc23004c390e2f4
       id: 2998817953
@@ -265,8 +265,8 @@ MonoBehaviour:
         guid: 8303f3a83713ad4e9cc23004c390e2f4
       Path: Events\Default Work Unit\PickUpItem\PlayPickupCloth
       maxAttenuation: 0
-      maxDuration: 0.99053127
-      minDuration: 0.72048956
+      maxDuration: 1.0500377
+      minDuration: 0.67965883
     - name: PlayPickupGlas
       guid: 8bd7a2ad60242a49bfa3e6c6b1324a56
       id: 1492217638
@@ -285,8 +285,8 @@ MonoBehaviour:
         guid: 8bd7a2ad60242a49bfa3e6c6b1324a56
       Path: Events\Default Work Unit\PickUpItem\PlayPickupGlas
       maxAttenuation: 0
-      maxDuration: 0.44551563
-      minDuration: 0.2673021
+      maxDuration: 0.7938186
+      minDuration: 0.15001823
     - name: PlayPickupMetal
       guid: 05f0f6712b9dca48b79c8e415aeefe48
       id: 1564899836
@@ -305,8 +305,8 @@ MonoBehaviour:
         guid: 05f0f6712b9dca48b79c8e415aeefe48
       Path: Events\Default Work Unit\PickUpItem\PlayPickupMetal
       maxAttenuation: 0
-      maxDuration: 0.73983335
-      minDuration: 0.57308334
+      maxDuration: 1.3182331
+      minDuration: 0.32163215
     - name: PlayPickupPlastic
       guid: a1a1902901d67147afd6569e79dc4ace
       id: 3518151353
@@ -325,8 +325,8 @@ MonoBehaviour:
         guid: a1a1902901d67147afd6569e79dc4ace
       Path: Events\Default Work Unit\PickUpItem\PlayPickupPlastic
       maxAttenuation: 0
-      maxDuration: 0.8091146
-      minDuration: 0.4356979
+      maxDuration: 1.4416783
+      minDuration: 0.24452718
     - name: PlaySuccesssound
       guid: c2b5f04e3312ac4183c9002eb43c2bc8
       id: 2096049309
@@ -413,7 +413,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 957f8ea5e4668b4687c0d97d7bc6a20d
     GuidInternal: 
-    m_lastTime: -8584585884515381027
+    m_lastTime: -8584585882497646713
     List:
     - name: BeepSpeed
       guid: f6e5b8347651f34db0aafe13ce182710

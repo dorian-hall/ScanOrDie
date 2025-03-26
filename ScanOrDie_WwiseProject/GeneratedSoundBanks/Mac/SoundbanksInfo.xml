@@ -34,7 +34,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1763365794" Type="User" Language="SFX" Hash="{A6A3AC31-4A2E-F4D1-E877-1A70A6AE5DEC}">
+		<SoundBank Id="1763365794" Type="User" Language="SFX" Hash="{6FED067E-E0F3-945F-5FF9-249668B278E1}">
 			<ShortName>AirportAmbience</ShortName>
 			<Path>AirportAmbience.bnk</Path>
 			<Media>
@@ -259,5 +259,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{FE3CB308-C9A5-9275-B9E4-63709146EFB2}</FileHash>
+	<FileHash>{7610F1F4-BCD4-8994-EA84-91B8E5B90C71}</FileHash>
 </SoundBanksInfo>
