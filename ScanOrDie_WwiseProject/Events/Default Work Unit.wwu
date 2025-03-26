@@ -69,7 +69,7 @@
 								<Action Name="" ID="{773EC69C-7D8D-4B14-B214-5323650790EB}" ShortID="411388552">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="AirportAmbience" ID="{E5708A1F-7847-4C26-B9FC-0C6E1DB95866}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
+											<ObjectRef Name="Ambience" ID="{DAA35E93-4ED4-4C07-849D-766D75F291B5}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

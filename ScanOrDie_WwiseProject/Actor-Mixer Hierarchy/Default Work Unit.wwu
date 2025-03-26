@@ -8,15 +8,18 @@
 						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="OutputBusHighpass" Type="int16">
 							<ValueList>
-								<Value>35</Value>
+								<Value>5</Value>
 							</ValueList>
 						</Property>
 						<Property Name="OutputBusLowpass" Type="int16">
 							<ValueList>
-								<Value>45</Value>
+								<Value>37</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-50</Value>
+							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{2DBC8491-11FB-4E6D-8F12-063DB91B37B3}">
@@ -26,6 +29,16 @@
 											<Property Name="Min" Type="Real64" Value="-1000"/>
 										</PropertyList>
 									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{163AEEFE-A72E-4176-B713-64FF4BE661BD}"/>
 								</ModifierInfo>
 							</ModifierList>
 						</Property>
@@ -39,13 +52,12 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="AirportAmbience" ID="{E5708A1F-7847-4C26-B9FC-0C6E1DB95866}" ShortID="224201800">
+						<BlendContainer Name="Ambience" ID="{DAA35E93-4ED4-4C07-849D-766D75F291B5}" ShortID="403734791">
 							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Pitch" Type="int32">
+								<Property Name="Volume" Type="Real64">
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{DA1CF2CB-5CBF-4C93-A7FC-405944384CED}"/>
+											<Modifier Name="" ID="{9CB3C794-EF37-4BF8-A69F-2800484BA39C}"/>
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
@@ -59,55 +71,140 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="AirportAmbience" ID="{ECAF957E-6790-4AB2-A66A-F38EE87C8134}">
+								<Sound Name="Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2" ID="{2C735841-B77D-4255-A0C8-612C04CD4D0D}" ShortID="1044641382">
 									<PropertyList>
-										<Property Name="LoopBegin" Type="Real64" Value="1.527"/>
-										<Property Name="LoopEnd" Type="Real64" Value="31.148750715859"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="31.2632130686826"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>12</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>44</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OutputBusHighpass" Type="int16">
+											<ValueList>
+												<Value>35</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OutputBusLowpass" Type="int16">
+											<ValueList>
+												<Value>45</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-430</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{F4B3CD34-B948-4A68-A3A8-F4091C46017C}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{63CA32AB-68B9-41A4-84A2-97C91935C45B}">
+														<PropertyList>
+															<Property Name="Max" Type="Real64" Value="30"/>
+															<Property Name="Min" Type="Real64" Value="-20"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>AirportAmbience.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="396762767"/>
-									</MediaIDList>
-								</AudioFileSource>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2" ID="{7FF34851-DB5A-4DF0-BC99-15B3F265E909}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.13791988452486"/>
+												<Property Name="TrimEnd" Type="Real64" Value="10.812918946749"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="393060965"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2" ID="{7FF34851-DB5A-4DF0-BC99-15B3F265E909}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="AirportAmbience" ID="{E5708A1F-7847-4C26-B9FC-0C6E1DB95866}" ShortID="224201800">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="OutputBusHighpass" Type="int16">
+											<ValueList>
+												<Value>35</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OutputBusLowpass" Type="int16">
+											<ValueList>
+												<Value>45</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-180</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{DA1CF2CB-5CBF-4C93-A7FC-405944384CED}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E1029833-17A2-46DC-85A0-7A25B74EAFA4}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AirportAmbience" ID="{ECAF957E-6790-4AB2-A66A-F38EE87C8134}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="1.527"/>
+												<Property Name="LoopEnd" Type="Real64" Value="31.148750715859"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="31.2632130686826"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>AirportAmbience.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="396762767"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AirportAmbience" ID="{ECAF957E-6790-4AB2-A66A-F38EE87C8134}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="AirportAmbience" ID="{ECAF957E-6790-4AB2-A66A-F38EE87C8134}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2" ID="{2C735841-B77D-4255-A0C8-612C04CD4D0D}" ShortID="1044641382">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{F4B3CD34-B948-4A68-A3A8-F4091C46017C}"/>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2" ID="{7FF34851-DB5A-4DF0-BC99-15B3F265E909}">
-									<Language>SFX</Language>
-									<AudioFile>Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="393060965"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2" ID="{7FF34851-DB5A-4DF0-BC99-15B3F265E909}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						</BlendContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<Folder Name="ScannerNoise" ID="{96A5A833-BB3F-4FE0-A462-8F0720C0B96F}" ShortID="238707289">
@@ -126,7 +223,7 @@
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -183,12 +280,12 @@
 																				<PointList>
 																					<Point>
 																						<XPos>0</XPos>
-																						<YPos>0.001</YPos>
+																						<YPos>0.5</YPos>
 																						<Flags>5</Flags>
 																					</Point>
 																					<Point>
-																						<XPos>100</XPos>
-																						<YPos>0.001</YPos>
+																						<XPos>1</XPos>
+																						<YPos>0.01</YPos>
 																						<Flags>37</Flags>
 																					</Point>
 																				</PointList>
@@ -261,13 +358,12 @@
 																<PointList>
 																	<Point>
 																		<XPos>0</XPos>
-																		<YPos>-2417</YPos>
+																		<YPos>-1205</YPos>
 																		<Flags>5</Flags>
-																		<SegmentShape>Exp1</SegmentShape>
 																	</Point>
 																	<Point>
-																		<XPos>100</XPos>
-																		<YPos>37</YPos>
+																		<XPos>1</XPos>
+																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -287,87 +383,17 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="SusDetection" ID="{D3744905-3E28-498E-B976-9707381B6117}" ShortID="412088356">
-					<ChildrenList>
-						<RandomSequenceContainer Name="BeepSequence" ID="{3B674930-4C4C-4998-B247-50A5511D02B3}" ShortID="369453965">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-30</Value>
-									</ValueList>
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{0C495234-047B-480F-9F8A-8A7E06D55626}"/>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="Beeps, General, Power On, Bank Terminal &amp; Scanner SND82924" ID="{0A799BB4-FDB3-4FA5-B64A-598580345BA1}" ShortID="840500171">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Beeps, General, Power On, Bank Terminal &amp; Scanner SND82924" ID="{A8F714A8-3D96-4184-8760-4903111EF693}">
-											<Language>SFX</Language>
-											<AudioFile>Beeps, General, Power On, Bank Terminal &amp; Scanner SND82924.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="905998506"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Beeps, General, Power On, Bank Terminal &amp; Scanner SND82924" ID="{A8F714A8-3D96-4184-8760-4903111EF693}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="SoundOfSilence" ID="{AB0B641C-D4CB-4036-866F-A557BBECB650}" ShortID="464206393">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<SourcePlugin Name="Silence" ID="{C501A53B-8F1A-44E0-AE40-0ECE7A4B343E}" ShortID="544812723" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
-											<PropertyList>
-												<Property Name="Length" Type="Real32" Value="0.001"/>
-											</PropertyList>
-											<Language>SFX</Language>
-										</SourcePlugin>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Silence" ID="{C501A53B-8F1A-44E0-AE40-0ECE7A4B343E}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-							</ChildrenList>
-							<Playlist>
-								<ItemRef Name="Beeps, General, Power On, Bank Terminal &amp; Scanner SND82924" ID="{0A799BB4-FDB3-4FA5-B64A-598580345BA1}"/>
-								<ItemRef Name="SoundOfSilence" ID="{AB0B641C-D4CB-4036-866F-A557BBECB650}"/>
-							</Playlist>
-						</RandomSequenceContainer>
-					</ChildrenList>
-				</Folder>
 				<ActorMixer Name="ConveyorBelt" ID="{CAF4544B-D3C0-4EA9-ADF0-C33D17EF522E}" ShortID="181881210">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>38</Value>
+							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{27963987-1EA7-41BF-9632-FBC3D83EA50F}"/>
@@ -380,6 +406,11 @@
 									<Modifier Name="" ID="{C2D6CC8A-8DAB-4D5A-AB6C-4788D93E5CC6}"/>
 								</ModifierInfo>
 							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
@@ -572,9 +603,20 @@
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
-													<Modifier Name="" ID="{6FE53316-FCE4-4267-9595-1BB3E283F6E1}"/>
+													<Modifier Name="" ID="{6FE53316-FCE4-4267-9595-1BB3E283F6E1}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="101"/>
+															<Property Name="Min" Type="Real64" Value="-101"/>
+														</PropertyList>
+													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -686,9 +728,20 @@
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
-													<Modifier Name="" ID="{3D5EEFDC-57AF-40AE-84BA-8B32F8011ACF}"/>
+													<Modifier Name="" ID="{3D5EEFDC-57AF-40AE-84BA-8B32F8011ACF}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1000"/>
+															<Property Name="Min" Type="Real64" Value="-1000"/>
+														</PropertyList>
+													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -800,9 +853,20 @@
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
-													<Modifier Name="" ID="{D215EABA-E645-4640-B317-7B122935C2D7}"/>
+													<Modifier Name="" ID="{D215EABA-E645-4640-B317-7B122935C2D7}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1000"/>
+															<Property Name="Min" Type="Real64" Value="-1000"/>
+														</PropertyList>
+													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -914,9 +978,20 @@
 										<Property Name="Pitch" Type="int32">
 											<ModifierList>
 												<ModifierInfo>
-													<Modifier Name="" ID="{DC7E9BF6-B00D-4F66-ABFC-31EEC2EB3185}"/>
+													<Modifier Name="" ID="{DC7E9BF6-B00D-4F66-ABFC-31EEC2EB3185}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="1000"/>
+															<Property Name="Min" Type="Real64" Value="-1000"/>
+														</PropertyList>
+													</Modifier>
 												</ModifierInfo>
 											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
@@ -1022,10 +1097,20 @@
 													<Modifier Name="" ID="{3F7E4745-911E-4BDE-80CD-B64B9550D569}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="328"/>
-															<Property Name="Min" Type="Real64" Value="-328"/>
+															<Property Name="Max" Type="Real64" Value="1000"/>
+															<Property Name="Min" Type="Real64" Value="-1000"/>
 														</PropertyList>
 													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{2EC9F64E-FB5D-4B52-88B5-FFE715355C2C}"/>
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
@@ -1429,6 +1514,11 @@
 											<Modifier Name="" ID="{E4939D16-97FC-4C65-A83F-9EA27AAF4F29}"/>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
