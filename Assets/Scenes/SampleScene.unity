@@ -510,7 +510,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -0.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -528,7 +528,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a372560f2e06b40a479ed5138ce982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handState: 0
   Distance: 0
+  bombs: []
   holdingTranform: {fileID: 0}
 --- !u!114 &519420034
 MonoBehaviour:
@@ -600,7 +602,7 @@ MonoBehaviour:
   - {fileID: 770711518405839546, guid: 7772f80e682a41f4d944a7f0f82a6b7e, type: 3}
   target: {fileID: 1229938040}
   ease: 7
-  duration: 20
+  duration: 10
 --- !u!4 &783127503
 Transform:
   m_ObjectHideFlags: 0
