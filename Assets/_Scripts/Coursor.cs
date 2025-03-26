@@ -34,7 +34,7 @@ public class Coursor : MonoBehaviour
             foreach (var bomb in bombs)
             {
                 float newdistance = Vector2.Distance( Camera.main.WorldToViewportPoint(bomb.position),Camera.main.ScreenToViewportPoint(Input.mousePosition));
-                //if(newdistance < distance) Distance = newdistance;
+                if(newdistance < distance) Distance = newdistance;
             }
             Debug.Log(AudioManager.instance.ScanerDistence.GetValue(AudioManager.instance.gameObject));
             if (!Input.GetMouseButton(0)) return;
@@ -43,7 +43,7 @@ public class Coursor : MonoBehaviour
           
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo))
             {
-                //Distance = 0;
+                Distance = 0;
                 holdingTranform = hitInfo.transform;
                 handState = HandState.Holding;
             } 

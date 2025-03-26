@@ -34,7 +34,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1763365794" Type="User" Language="SFX" Hash="{13216DA2-68E4-AEA1-848D-1738555BC23F}">
+		<SoundBank Id="1763365794" Type="User" Language="SFX" Hash="{A6A3AC31-4A2E-F4D1-E877-1A70A6AE5DEC}">
 			<ShortName>AirportAmbience</ShortName>
 			<Path>AirportAmbience.bnk</Path>
 			<Media>
@@ -80,7 +80,7 @@
 				</File>
 				<File Id="393060965" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2.wav</ShortName>
-					<CachePath>SFX/Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2_19D01FAF.wem</CachePath>
+					<CachePath>SFX/Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2_796C4F09.wem</CachePath>
 				</File>
 				<File Id="396762767" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AirportAmbience.wav</ShortName>
@@ -259,5 +259,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{672EB92E-2776-5D6B-5832-7821A863191D}</FileHash>
+	<FileHash>{FE3CB308-C9A5-9275-B9E4-63709146EFB2}</FileHash>
 </SoundBanksInfo>
