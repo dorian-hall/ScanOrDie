@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6620BD7-DBD2-11F7-D125-FD4D717BC4BF}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{D42DE07A-A975-CB5B-9B99-6B5C7F6EF4D8}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -34,7 +34,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1763365794" Type="User" Language="SFX" Hash="{29B4A5FB-FFBB-81C0-B289-4E18F7283B37}">
+		<SoundBank Id="1763365794" Type="User" Language="SFX" Hash="{D766AEE6-485C-E6BE-3EDB-E7A27664D832}">
 			<ShortName>AirportAmbience</ShortName>
 			<Path>AirportAmbience.bnk</Path>
 			<Media>
@@ -77,10 +77,6 @@
 				<File Id="299186621" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Toys, Misc, Toy Cars, Metal, Pick Up From Table SND29439.wav</ShortName>
 					<CachePath>SFX/Toys, Misc, Toy Cars, Metal, Pick Up From Table SND29439_10C4C929.wem</CachePath>
-				</File>
-				<File Id="393060965" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2.wav</ShortName>
-					<CachePath>SFX/Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2_19D01FAF.wem</CachePath>
 				</File>
 				<File Id="396762767" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AirportAmbience.wav</ShortName>
@@ -169,7 +165,6 @@
 					<MediaRefs>
 						<MediaRef Id="82722839"/>
 						<MediaRef Id="181301099"/>
-						<MediaRef Id="393060965"/>
 						<MediaRef Id="396762767"/>
 						<MediaRef Id="995767769"/>
 					</MediaRefs>
@@ -199,35 +194,35 @@
 						<MediaRef Id="168313656"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2115165411" Name="PlayPickupBomb" DurationType="OneShot" DurationMin="0.24203087" DurationMax="1.2583945">
+				<Event Id="2115165411" Name="PlayPickupBomb" DurationType="OneShot" DurationMin="0.35681868" DurationMax="0.8535717">
 					<MediaRefs>
 						<MediaRef Id="461754974"/>
 						<MediaRef Id="971344149"/>
 						<MediaRef Id="996682008"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2998817953" Name="PlayPickupCloth" DurationType="OneShot" DurationMin="0.67965883" DurationMax="1.0500377">
+				<Event Id="2998817953" Name="PlayPickupCloth" DurationType="OneShot" DurationMin="0.72048956" DurationMax="0.99053127">
 					<MediaRefs>
 						<MediaRef Id="578373534"/>
 						<MediaRef Id="915393983"/>
 						<MediaRef Id="1026676219"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1492217638" Name="PlayPickupGlas" DurationType="OneShot" DurationMin="0.15001823" DurationMax="0.7938186">
+				<Event Id="1492217638" Name="PlayPickupGlas" DurationType="OneShot" DurationMin="0.2673021" DurationMax="0.44551563">
 					<MediaRefs>
 						<MediaRef Id="91748936"/>
 						<MediaRef Id="567136279"/>
 						<MediaRef Id="585805240"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1564899836" Name="PlayPickupMetal" DurationType="OneShot" DurationMin="0.32163215" DurationMax="1.3182331">
+				<Event Id="1564899836" Name="PlayPickupMetal" DurationType="OneShot" DurationMin="0.57308334" DurationMax="0.73983335">
 					<MediaRefs>
 						<MediaRef Id="184787192"/>
 						<MediaRef Id="656372241"/>
 						<MediaRef Id="903793539"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3518151353" Name="PlayPickupPlastic" DurationType="OneShot" DurationMin="0.24452718" DurationMax="1.4416783">
+				<Event Id="3518151353" Name="PlayPickupPlastic" DurationType="OneShot" DurationMin="0.4356979" DurationMax="0.8091146">
 					<MediaRefs>
 						<MediaRef Id="188187979"/>
 						<MediaRef Id="299186621"/>
@@ -259,5 +254,5 @@
 			</StateGroups>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CA1FCFB4-4A22-EBEA-A1AB-2CB648AA0623}</FileHash>
+	<FileHash>{D428C41F-C961-383F-9B85-4B798D6D2831}</FileHash>
 </SoundBanksInfo>

@@ -384,7 +384,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505810811}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a8b4720466f49a4aaaed0fc90922076, type: 3}
   m_Name: 
@@ -430,6 +430,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: ba806e1db572ee34f9a96cdfbb2f1069, type: 2}
+  ScanerDistence:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f54401aabbba3b54881ff8718e4f004b, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

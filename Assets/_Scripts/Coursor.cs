@@ -27,22 +27,23 @@ public class Coursor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        AudioManager.instance.ScanerDistence.SetValue(AudioManager.instance.gameObject,Distance);
         if (handState == HandState.Scaning)
         {
             float distance = float.MaxValue;
             foreach (var bomb in bombs)
             {
                 float newdistance = Vector2.Distance( Camera.main.WorldToViewportPoint(bomb.position),Camera.main.ScreenToViewportPoint(Input.mousePosition));
-                if(newdistance < distance) Distance = newdistance;
+                //if(newdistance < distance) Distance = newdistance;
             }
+            Debug.Log(AudioManager.instance.ScanerDistence.GetValue(AudioManager.instance.gameObject));
             if (!Input.GetMouseButton(0)) return;
             RaycastHit hitInfo;
             
           
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo))
             {
-                Distance = 0;
+                //Distance = 0;
                 holdingTranform = hitInfo.transform;
                 handState = HandState.Holding;
             } 
