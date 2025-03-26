@@ -66,8 +66,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 52223cf92712e34084cae0c2cb745320
     GuidInternal: 
-    m_lastTime: -8584597989619646418
-    List: []
+    m_lastTime: -8584591908628854767
+    List:
+    - name: AirportAmbience
+      guid: 8e77d231cc419f4484d30da440acc09c
+      id: 1763365794
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 52223cf92712e34084cae0c2cb745320
+      - ElementName: AirportAmbience
+        ObjectType: 7
+        guid: 8e77d231cc419f4484d30da440acc09c
+      Path: SoundBanks\Default Work Unit\AirportAmbience
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -80,8 +94,119 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: a807cf9d75b013418a079b6b5d213d7d
     GuidInternal: 
-    m_lastTime: -8584597989620335981
-    List: []
+    m_lastTime: -8584591912467434829
+    List:
+    - name: Ambience
+      guid: c0a3e4f6e4d89845b77100c410cd6125
+      id: 85412153
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: c0a3e4f6e4d89845b77100c410cd6125
+      Path: Events\Default Work Unit\Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Conveyorbelt
+      guid: e3d8a9106b9a7b4390f9d4ae6acdf7b3
+      id: 1687970961
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: c0a3e4f6e4d89845b77100c410cd6125
+      - ElementName: Conveyorbelt
+        ObjectType: 3
+        guid: e3d8a9106b9a7b4390f9d4ae6acdf7b3
+      Path: Events\Default Work Unit\Ambience\Conveyorbelt
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Pickup
+      guid: acf61e9740121442911d496d894c74de
+      id: 3978245845
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: PickUpItem
+        ObjectType: 4
+        guid: c3b3ecf147a7e145b4c1e0b503386c82
+      - ElementName: Pickup
+        ObjectType: 3
+        guid: acf61e9740121442911d496d894c74de
+      Path: Events\Default Work Unit\PickUpItem\Pickup
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: PickUpItem
+      guid: c3b3ecf147a7e145b4c1e0b503386c82
+      id: 3016565752
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: PickUpItem
+        ObjectType: 4
+        guid: c3b3ecf147a7e145b4c1e0b503386c82
+      Path: Events\Default Work Unit\PickUpItem
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_AirportAmbience
+      guid: da7852fc61215342aef50dbfc9392e83
+      id: 4074573783
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: Ambience
+        ObjectType: 4
+        guid: c0a3e4f6e4d89845b77100c410cd6125
+      - ElementName: Play_AirportAmbience
+        ObjectType: 3
+        guid: da7852fc61215342aef50dbfc9392e83
+      Path: Events\Default Work Unit\Ambience\Play_AirportAmbience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: TheDetector
+      guid: 53943650cd2d374eab0219d639d1f078
+      id: 2465096132
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a807cf9d75b013418a079b6b5d213d7d
+      - ElementName: TheDetector
+        ObjectType: 3
+        guid: 53943650cd2d374eab0219d639d1f078
+      Path: Events\Default Work Unit\TheDetector
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -94,8 +219,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 957f8ea5e4668b4687c0d97d7bc6a20d
     GuidInternal: 
-    m_lastTime: -8584597989619193441
-    List: []
+    m_lastTime: -8584591924800959611
+    List:
+    - name: BeepSpeed
+      guid: f6e5b8347651f34db0aafe13ce182710
+      id: 1101615186
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 957f8ea5e4668b4687c0d97d7bc6a20d
+      - ElementName: BeepSpeed
+        ObjectType: 13
+        guid: f6e5b8347651f34db0aafe13ce182710
+      Path: Game Parameters\Default Work Unit\BeepSpeed
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -108,8 +247,74 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 18ff2ef10b3d4c4e864dd3af0e6b9d97
     GuidInternal: 
-    m_lastTime: -8584597989620109496
-    List: []
+    m_lastTime: -8584591908629035119
+    List:
+    - name: ObjectType
+      guid: c2eef3f3be0eb548b81cdf5b01992f6d
+      id: 951044540
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 18ff2ef10b3d4c4e864dd3af0e6b9d97
+      - ElementName: ObjectType
+        ObjectType: 9
+        guid: c2eef3f3be0eb548b81cdf5b01992f6d
+      Path: States\Default Work Unit\ObjectType
+      values:
+      - name: Cloth
+        guid: 7be2c224850bfd4ba6b819e66ff6be38
+        id: 1367384683
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 18ff2ef10b3d4c4e864dd3af0e6b9d97
+        - ElementName: ObjectType
+          ObjectType: 9
+          guid: c2eef3f3be0eb548b81cdf5b01992f6d
+        - ElementName: Cloth
+          ObjectType: 8
+          guid: 7be2c224850bfd4ba6b819e66ff6be38
+      - name: None
+        guid: 4e51986a96fc034d9e62b4bcd89e9c96
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 18ff2ef10b3d4c4e864dd3af0e6b9d97
+        - ElementName: ObjectType
+          ObjectType: 9
+          guid: c2eef3f3be0eb548b81cdf5b01992f6d
+        - ElementName: None
+          ObjectType: 8
+          guid: 4e51986a96fc034d9e62b4bcd89e9c96
+      - name: Plastic
+        guid: 45e1f97e72fa44428742be63566adb55
+        id: 660835419
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 18ff2ef10b3d4c4e864dd3af0e6b9d97
+        - ElementName: ObjectType
+          ObjectType: 9
+          guid: c2eef3f3be0eb548b81cdf5b01992f6d
+        - ElementName: Plastic
+          ObjectType: 8
+          guid: 45e1f97e72fa44428742be63566adb55
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:

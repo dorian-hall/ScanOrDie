@@ -3,17 +3,154 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{9DCF07A8-B075-4113-8A07-9B6B5D213D7D}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Play_AirportAmbience" ID="{FC5278DA-2161-4253-AEF5-0DBFC9392E83}">
+				<Folder Name="PickUpItem" ID="{F1ECB3C3-A747-45E1-B4C1-E0B503386C82}" ShortID="67309722">
 					<ChildrenList>
-						<Action Name="" ID="{773EC69C-7D8D-4B14-B214-5323650790EB}" ShortID="411388552">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="AirportAmbience" ID="{E5708A1F-7847-4C26-B9FC-0C6E1DB95866}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="PlayPickupBomb" ID="{971EF6AC-1240-4214-911D-496D894C74DE}">
+							<ChildrenList>
+								<Action Name="" ID="{AEECE9F4-1965-4EEB-8FD1-54F2EF5ACF45}" ShortID="302623194">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="bomb" ID="{00F6FEF0-E03C-41AA-91D1-F82043E5FCD5}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PlayPickupCloth" ID="{A8F30383-1337-4EAD-9CC2-3004C390E2F4}">
+							<ChildrenList>
+								<Action Name="" ID="{E427AA18-EFE0-43FA-833E-F2B4CEE28265}" ShortID="681446606">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cloth" ID="{3569FF25-A015-4287-A917-6541C00D36D5}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PlayPickupGlas" ID="{ADA2D78B-2460-492A-BFA3-E6C6B1324A56}">
+							<ChildrenList>
+								<Action Name="" ID="{2A8C184B-BF0E-44CB-A6B5-9DC910EBA6D6}" ShortID="979397919">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Glas" ID="{9352575C-1AB9-46BB-8E9B-C18694FCB12D}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PlayPickupMetal" ID="{71F6F005-9D2B-48CA-B79C-8E415AEEFE48}">
+							<ChildrenList>
+								<Action Name="" ID="{60E16A75-7F33-4801-BB8B-08F244499C85}" ShortID="599881353">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Metal" ID="{684AB4E0-C7BA-492F-B5DC-C4D2685A8D78}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PlayPickupPlastic" ID="{2990A1A1-D601-4771-AFD6-569E79DC4ACE}">
+							<ChildrenList>
+								<Action Name="" ID="{383B4C1F-AF2A-4364-AF0E-0684F221737A}" ShortID="746760513">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Plastic" ID="{D603E4D4-9EFE-476D-BAEB-CFE8007AF657}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
+				</Folder>
+				<Folder Name="Ambience" ID="{F6E4A3C0-D8E4-4598-B771-00C410CD6125}" ShortID="132094356">
+					<ChildrenList>
+						<Event Name="Play_AirportAmbience" ID="{FC5278DA-2161-4253-AEF5-0DBFC9392E83}">
+							<ChildrenList>
+								<Action Name="" ID="{773EC69C-7D8D-4B14-B214-5323650790EB}" ShortID="411388552">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="AirportAmbience" ID="{E5708A1F-7847-4C26-B9FC-0C6E1DB95866}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{2977F62D-4FFC-4F66-ABE7-2AAEF64FDF3C}" ShortID="985102952">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="New Random Container" ID="{70C0F864-1159-47AD-AA8D-06FCC085B971}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="RightOrWrongTarget" ID="{9E9C2A71-82F5-461E-837B-BDD69151340C}" ShortID="812376923">
+					<ChildrenList>
+						<Event Name="PlayFailsound" ID="{633F8101-95B5-4415-B4E9-D11C87158A39}">
+							<ChildrenList>
+								<Action Name="" ID="{F95D4DDC-CF14-4551-B2E0-8F5E22559104}" ShortID="451864161">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="User Interface, Alert, Failure, Access Denied 01 SND57512" ID="{4783560C-D440-41DB-A05D-5498F293FAB2}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PlaySuccesssound" ID="{4EF0B5C2-1233-41AC-83C9-002EB43C2BC8}">
+							<ChildrenList>
+								<Action Name="" ID="{AE3DE580-B953-4F86-8FF3-C74C8C9639EF}" ShortID="1031488763">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="User Interface, Misc, Completions, Melodic, Success SND115458" ID="{F1D36748-4F62-4FCA-9327-9CD7642014B5}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Detector" ID="{33005F02-05CE-4247-AA47-061891DD0796}" ShortID="617161002">
+					<ChildrenList>
+						<Event Name="PlayDetector" ID="{50369453-2DCD-4E37-AB02-19D639D1F078}">
+							<ChildrenList>
+								<Action Name="" ID="{ADAC5B46-BCAF-4F49-BDBE-956EB61B776E}" ShortID="1020907504">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BeepSequence" ID="{5FD984A1-BECF-4A94-9DDC-B852FA47A6CB}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="SuccessOrFailure" ID="{344D9D6E-87FF-463E-840F-CFF88FEFA620}" ShortID="904535546">
+					<ChildrenList>
+						<Event Name="PlayVictorySound" ID="{7AE40AE5-AE89-4AF6-B25F-93B19F60C05F}">
+							<ChildrenList>
+								<Action Name="" ID="{8F33B88F-AF94-4C3B-B16D-635EF7CD000E}" ShortID="646746466">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cartoon, Musical, Orchestral, Trumpet, Vintage, Triumph, Victory SND11695 1" ID="{77225DD9-6A33-4B0F-8785-63AA26E1E269}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="PlayExplosionSound" ID="{3A787931-2FD3-4E91-B9A7-16E88624626D}">
+							<ChildrenList>
+								<Action Name="" ID="{D6EB7307-2CF6-416E-9000-987D9D900064}" ShortID="525306953">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Explosion" ID="{1A286A5A-C496-4775-B9B0-78781C9959F9}" WorkUnitID="{B6CC2797-5118-4C43-953F-003A25277C68}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

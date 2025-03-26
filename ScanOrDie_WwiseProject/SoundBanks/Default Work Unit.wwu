@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="AirportAmbience" ID="{31D2778E-41CC-449F-84D3-0DA440ACC09C}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Play_AirportAmbience" ID="{FC5278DA-2161-4253-AEF5-0DBFC9392E83}" WorkUnitID="{9DCF07A8-B075-4113-8A07-9B6B5D213D7D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Default Work Unit" ID="{9DCF07A8-B075-4113-8A07-9B6B5D213D7D}" WorkUnitID="{9DCF07A8-B075-4113-8A07-9B6B5D213D7D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -22,8 +22,8 @@
 									<Modifier Name="" ID="{2DBC8491-11FB-4E6D-8F12-063DB91B37B3}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="200"/>
-											<Property Name="Min" Type="Real64" Value="-200"/>
+											<Property Name="Max" Type="Real64" Value="1000"/>
+											<Property Name="Min" Type="Real64" Value="-1000"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -77,12 +77,55 @@
 								<ActiveSource Name="AirportAmbience" ID="{ECAF957E-6790-4AB2-A66A-F38EE87C8134}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2" ID="{2C735841-B77D-4255-A0C8-612C04CD4D0D}" ShortID="1044641382">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{F4B3CD34-B948-4A68-A3A8-F4091C46017C}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2" ID="{7FF34851-DB5A-4DF0-BC99-15B3F265E909}">
+									<Language>SFX</Language>
+									<AudioFile>Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="393060965"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Ambience, Transportation, Airport, Airport Security, Plastic Boxes Handling, Suitcase Clicks SND59850 2" ID="{7FF34851-DB5A-4DF0-BC99-15B3F265E909}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 				<Folder Name="ScannerNoise" ID="{96A5A833-BB3F-4FE0-A462-8F0720C0B96F}" ShortID="238707289">
 					<ChildrenList>
 						<RandomSequenceContainer Name="BeepSequence" ID="{5FD984A1-BECF-4A94-9DDC-B852FA47A6CB}" ShortID="1029421088">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-180</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D97685C5-BC32-41EF-80AF-5B659E9D5F2C}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 							</PropertyList>
 							<ReferenceList>
@@ -93,9 +136,1417 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SoundOfSilence" ID="{7FE2C0EA-3819-4B83-A1C4-90DDAC4422C3}" ShortID="31563687">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{4C845783-8AFA-4C6A-9D14-FEB0784497AB}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Silence" ID="{0C6F5C18-C87E-45E0-B639-9A076CDA32CB}" ShortID="1039683303" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="0.5"/>
+											</PropertyList>
+											<ObjectLists>
+												<ObjectList Name="RTPC">
+													<Reference>
+														<Local>
+															<RTPC Name="" ID="{76B0C813-C603-47C2-9723-52BC7981F58F}" ShortID="230825549">
+																<PropertyList>
+																	<Property Name="PropertyName" Type="string" Value="Length"/>
+																</PropertyList>
+																<ReferenceList>
+																	<Reference Name="ControlInput">
+																		<ObjectRef Name="BeepSpeed" ID="{34B8E5F6-5176-4DF3-B0AA-FE13CE182710}" WorkUnitID="{A58E7F95-66E4-468B-87C0-D97D7BC6A20D}"/>
+																	</Reference>
+																	<Reference Name="Curve">
+																		<Custom>
+																			<Curve Name="" ID="{249C43DD-8C44-42B8-9AD5-D960E9E6D1D2}">
+																				<PropertyList>
+																					<Property Name="Flags" Type="int32" Value="1"/>
+																				</PropertyList>
+																				<PointList>
+																					<Point>
+																						<XPos>0</XPos>
+																						<YPos>0.001</YPos>
+																						<Flags>5</Flags>
+																					</Point>
+																					<Point>
+																						<XPos>100</XPos>
+																						<YPos>0.001</YPos>
+																						<Flags>37</Flags>
+																					</Point>
+																				</PointList>
+																			</Curve>
+																		</Custom>
+																	</Reference>
+																</ReferenceList>
+															</RTPC>
+														</Local>
+													</Reference>
+												</ObjectList>
+											</ObjectLists>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Silence" ID="{0C6F5C18-C87E-45E0-B639-9A076CDA32CB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Beeps, General, Power On, Bank Terminal &amp; Scanner SND82924 2" ID="{F228309A-EBD5-44B0-BFE7-81B0D9FCCBEB}" ShortID="178438762">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{B7E901EF-AB86-46C0-B873-EC8F00946CA7}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Beeps, General, Power On, Bank Terminal &amp; Scanner SND82924 2" ID="{956B1581-8BBC-464C-8C36-A589F60DEAC6}">
+											<Language>SFX</Language>
+											<AudioFile>Beeps, General, Power On, Bank Terminal &amp; Scanner SND82924 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="783244037"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Beeps, General, Power On, Bank Terminal &amp; Scanner SND82924 2" ID="{956B1581-8BBC-464C-8C36-A589F60DEAC6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{4CEC7D6A-4EF4-4E8C-9D68-9E8AC35B36EC}" ShortID="147105855">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Pitch"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="BeepSpeed" ID="{34B8E5F6-5176-4DF3-B0AA-FE13CE182710}" WorkUnitID="{A58E7F95-66E4-468B-87C0-D97D7BC6A20D}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{C58F3C13-A0CC-456E-8C48-1AE884AF5F6D}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="65537"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-317</YPos>
+																		<Flags>5</Flags>
+																		<SegmentShape>Log1</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-22</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+							<Playlist>
+								<ItemRef Name="SoundOfSilence" ID="{7FE2C0EA-3819-4B83-A1C4-90DDAC4422C3}"/>
+								<ItemRef Name="Beeps, General, Power On, Bank Terminal &amp; Scanner SND82924 2" ID="{F228309A-EBD5-44B0-BFE7-81B0D9FCCBEB}"/>
+							</Playlist>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="SusDetection" ID="{D3744905-3E28-498E-B976-9707381B6117}" ShortID="412088356">
+					<ChildrenList>
+						<RandomSequenceContainer Name="BeepSequence" ID="{3B674930-4C4C-4998-B247-50A5511D02B3}" ShortID="369453965">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-30</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0C495234-047B-480F-9F8A-8A7E06D55626}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Beeps, General, Power On, Bank Terminal &amp; Scanner SND82924" ID="{0A799BB4-FDB3-4FA5-B64A-598580345BA1}" ShortID="840500171">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Beeps, General, Power On, Bank Terminal &amp; Scanner SND82924" ID="{A8F714A8-3D96-4184-8760-4903111EF693}">
+											<Language>SFX</Language>
+											<AudioFile>Beeps, General, Power On, Bank Terminal &amp; Scanner SND82924.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="905998506"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Beeps, General, Power On, Bank Terminal &amp; Scanner SND82924" ID="{A8F714A8-3D96-4184-8760-4903111EF693}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SoundOfSilence" ID="{AB0B641C-D4CB-4036-866F-A557BBECB650}" ShortID="464206393">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Silence" ID="{C501A53B-8F1A-44E0-AE40-0ECE7A4B343E}" ShortID="544812723" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="0.001"/>
+											</PropertyList>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Silence" ID="{C501A53B-8F1A-44E0-AE40-0ECE7A4B343E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="Beeps, General, Power On, Bank Terminal &amp; Scanner SND82924" ID="{0A799BB4-FDB3-4FA5-B64A-598580345BA1}"/>
+								<ItemRef Name="SoundOfSilence" ID="{AB0B641C-D4CB-4036-866F-A557BBECB650}"/>
+							</Playlist>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<ActorMixer Name="ConveyorBelt" ID="{CAF4544B-D3C0-4EA9-ADF0-C33D17EF522E}" ShortID="181881210">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{27963987-1EA7-41BF-9632-FBC3D83EA50F}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{C2D6CC8A-8DAB-4D5A-AB6C-4788D93E5CC6}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="New Random Container" ID="{70C0F864-1159-47AD-AA8D-06FCC085B971}" ShortID="786205867">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{9D99C8DD-B932-43EE-8757-2470341586EF}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="OverrideConversion" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{7D219219-4A4B-40AF-ADCD-742FD0648AD7}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="conveyor1" ID="{34465E6D-D725-4686-B86C-7C8083BFD479}" ShortID="862693704">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E29A0B56-13A9-45EB-BF4E-986DE33C2D6A}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="conveyor1" ID="{9DBE468A-A877-4B90-844F-EDF580065F87}">
+											<Language>SFX</Language>
+											<AudioFile>conveyor1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="181301099"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="conveyor1" ID="{9DBE468A-A877-4B90-844F-EDF580065F87}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="conveyor2" ID="{BF98763A-1EE7-4968-B8CE-82AEF6490A70}" ShortID="806496588">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A0587228-79BC-4C37-9A3C-6F5DCF947CC7}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="conveyor2" ID="{389F9E25-039C-47E3-B5B9-893DE8C8B403}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>conveyor2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="82722839"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="conveyor2" ID="{389F9E25-039C-47E3-B5B9-893DE8C8B403}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="conveyor3" ID="{E7F3931C-42EC-4E3A-BF2D-880AC1CED9BC}" ShortID="1034991246">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E7D59D8E-A91A-4DB4-80A6-6DFAB21BA6F6}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="conveyor3" ID="{9ED1F598-1E7A-4397-82F1-3C3F703DFFD0}">
+											<Language>SFX</Language>
+											<AudioFile>conveyor3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="995767769"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="conveyor3" ID="{9ED1F598-1E7A-4397-82F1-3C3F703DFFD0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
+				<Folder Name="Pickup" ID="{3B678667-E0BB-4380-A043-E195B7CC848D}" ShortID="264654810">
+					<ChildrenList>
+						<SwitchContainer Name="PickUpSwitch" ID="{E947EDE0-2019-4DBC-A917-59D38EAD527A}" ShortID="505821277">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B97E2533-A196-4F3A-9DD8-B65035550CC2}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Cloth" ID="{24C2E27B-0B85-4BFD-A6B8-19E66FF6BE38}" WorkUnitID="{F12EFF18-3D0B-4E4C-864D-D3AF0E6B9D97}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="ObjectType" ID="{F3F3EEC2-0EBE-48B5-B81C-DF5B01992F6D}" WorkUnitID="{F12EFF18-3D0B-4E4C-864D-D3AF0E6B9D97}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Cloth" ID="{3569FF25-A015-4287-A917-6541C00D36D5}" ShortID="96182992">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{6FE53316-FCE4-4267-9595-1BB3E283F6E1}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Cloth, Handle, Wetsuit, Pick Up SND20932" ID="{548E56BE-AF05-4584-9BBD-BFEC51C54B41}" ShortID="980247604">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{3EFB871C-1B4A-4ACD-9690-7C1093351DB4}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cloth, Handle, Wetsuit, Pick Up SND20932" ID="{F2EF456E-9559-402B-9787-AB97A9B7BA1A}">
+													<Language>SFX</Language>
+													<AudioFile>Cloth, Handle, Wetsuit, Pick Up SND20932.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="578373534"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cloth, Handle, Wetsuit, Pick Up SND20932" ID="{F2EF456E-9559-402B-9787-AB97A9B7BA1A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Cloth, Handle, Raincoat, Pick Up SND16711" ID="{2B2AB699-9033-4129-ADD1-85B00D285CFE}" ShortID="516275968">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{6F3C6E5C-82FA-48CC-BC2E-905DDA1C20E7}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Cloth, Handle, Raincoat, Pick Up SND16711" ID="{20D82D8A-07FF-415F-A4CA-ED779EA30C9D}">
+													<Language>SFX</Language>
+													<AudioFile>Cloth, Handle, Raincoat, Pick Up SND16711.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1026676219"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Cloth, Handle, Raincoat, Pick Up SND16711" ID="{20D82D8A-07FF-415F-A4CA-ED779EA30C9D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Plastic, Handle, Movement, Plastic Bag, Full Of Clothes, Pick Up SND18693" ID="{1551631A-814B-4670-8B9B-3FAC15502C42}" ShortID="84886246">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E729B5EA-6359-42D7-9801-5E2F6E02FC24}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Plastic, Handle, Movement, Plastic Bag, Full Of Clothes, Pick Up SND18693" ID="{6A5CC31C-B645-4246-B5E4-18CA4AC30123}">
+													<Language>SFX</Language>
+													<AudioFile>Plastic, Handle, Movement, Plastic Bag, Full Of Clothes, Pick Up SND18693.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="915393983"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Plastic, Handle, Movement, Plastic Bag, Full Of Clothes, Pick Up SND18693" ID="{6A5CC31C-B645-4246-B5E4-18CA4AC30123}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Plastic" ID="{D603E4D4-9EFE-476D-BAEB-CFE8007AF657}" ShortID="330709107">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3D5EEFDC-57AF-40AE-84BA-8B32F8011ACF}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Toys, Misc, Toy Cars, Metal, Pick Up From Table SND29439" ID="{5BA141D3-EC18-4D4E-9C16-F0F4A9437D71}" ShortID="851273477">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{151A6EF9-068E-4941-AA2A-3392FAAC4650}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Toys, Misc, Toy Cars, Metal, Pick Up From Table SND29439" ID="{F29C6FB5-4B29-443E-91EF-D3B84686B66F}">
+													<Language>SFX</Language>
+													<AudioFile>Toys, Misc, Toy Cars, Metal, Pick Up From Table SND29439.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="299186621"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Toys, Misc, Toy Cars, Metal, Pick Up From Table SND29439" ID="{F29C6FB5-4B29-443E-91EF-D3B84686B66F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Toys, Mechanical, Brick Toy, Pick Up From Carpet SND113687" ID="{2C4896DA-8172-4C8A-971F-DE3D3126A056}" ShortID="477855524">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{68A3B620-5B6E-4E45-97F8-13A9826DB011}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Toys, Mechanical, Brick Toy, Pick Up From Carpet SND113687" ID="{F89F0C0A-6BE4-47CA-B985-8F9BA75EB93A}">
+													<Language>SFX</Language>
+													<AudioFile>Toys, Mechanical, Brick Toy, Pick Up From Carpet SND113687.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1000405998"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Toys, Mechanical, Brick Toy, Pick Up From Carpet SND113687" ID="{F89F0C0A-6BE4-47CA-B985-8F9BA75EB93A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Toys, Misc, Plastic Figure, Pick Up From Table SND29719" ID="{1EF11404-2CE2-444D-A50B-4EDACCBFFE27}" ShortID="362036667">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{BF095D5C-B8D8-43F9-8F63-90202E071AC0}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Toys, Misc, Plastic Figure, Pick Up From Table SND29719" ID="{CD81195B-24E5-4106-963F-2F1C454C8000}">
+													<Language>SFX</Language>
+													<AudioFile>Toys, Misc, Plastic Figure, Pick Up From Table SND29719.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="188187979"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Toys, Misc, Plastic Figure, Pick Up From Table SND29719" ID="{CD81195B-24E5-4106-963F-2F1C454C8000}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Glas" ID="{9352575C-1AB9-46BB-8E9B-C18694FCB12D}" ShortID="539895755">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D215EABA-E645-4640-B317-7B122935C2D7}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Food &amp; Drink, Glassware, Bottle, Wine, Pick Up From Table SND20424" ID="{306C4966-2146-4A47-AED0-F429B58E6276}" ShortID="315707976">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{1D26BD1E-6F16-4F88-BD56-23462E93DD3B}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Food &amp; Drink, Glassware, Bottle, Wine, Pick Up From Table SND20424" ID="{BA7DE1F8-9186-4DE7-A0D6-4180AD3D1E65}">
+													<Language>SFX</Language>
+													<AudioFile>Food &amp; Drink, Glassware, Bottle, Wine, Pick Up From Table SND20424.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="567136279"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Food &amp; Drink, Glassware, Bottle, Wine, Pick Up From Table SND20424" ID="{BA7DE1F8-9186-4DE7-A0D6-4180AD3D1E65}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Food &amp; Drink, Glassware, Tea Cup, Picking Up, Putting Down, China Tea Set 01 SND63740 1" ID="{780D2A5E-E3E2-4640-936F-42FDC6D72FCA}" ShortID="844479681">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{B59A4DD5-FFAB-42C0-8B08-582289C39136}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Food &amp; Drink, Glassware, Tea Cup, Picking Up, Putting Down, China Tea Set 01 SND63740 1" ID="{ED2A7518-ECE5-4697-A620-2BC43467EF4B}">
+													<Language>SFX</Language>
+													<AudioFile>Food &amp; Drink, Glassware, Tea Cup, Picking Up, Putting Down, China Tea Set 01 SND63740 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="91748936"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Food &amp; Drink, Glassware, Tea Cup, Picking Up, Putting Down, China Tea Set 01 SND63740 1" ID="{ED2A7518-ECE5-4697-A620-2BC43467EF4B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Food &amp; Drink, Glassware, Tea Cup, Picking Up, Putting Down, China Tea Set 01 SND63740 3" ID="{FF4AC318-AB70-4B23-BB48-ABB629A3332B}" ShortID="909176472">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{8EEF8141-D15D-4FF9-96BA-08CB0710EF8A}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Food &amp; Drink, Glassware, Tea Cup, Picking Up, Putting Down, China Tea Set 01 SND63740 3" ID="{CDEA87CE-99A1-4B1F-9886-1F5476C04203}">
+													<Language>SFX</Language>
+													<AudioFile>Food &amp; Drink, Glassware, Tea Cup, Picking Up, Putting Down, China Tea Set 01 SND63740 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="585805240"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Food &amp; Drink, Glassware, Tea Cup, Picking Up, Putting Down, China Tea Set 01 SND63740 3" ID="{CDEA87CE-99A1-4B1F-9886-1F5476C04203}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Metal" ID="{684AB4E0-C7BA-492F-B5DC-C4D2685A8D78}" ShortID="929455668">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{DC7E9BF6-B00D-4F66-ABFC-31EEC2EB3185}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Tools, Hand, Metal Saw, Put Down, Pick Up, Toolbox SND75661" ID="{8C6258C9-169F-4894-865E-7E82A67BA5F1}" ShortID="379369838">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{1B7CF7C5-1A12-418C-9A2A-0E44783287DF}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tools, Hand, Metal Saw, Put Down, Pick Up, Toolbox SND75661" ID="{3E240C26-C028-4CF1-AD6C-3AAC30BB03D6}">
+													<Language>SFX</Language>
+													<AudioFile>Tools, Hand, Metal Saw, Put Down, Pick Up, Toolbox SND75661.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="656372241"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tools, Hand, Metal Saw, Put Down, Pick Up, Toolbox SND75661" ID="{3E240C26-C028-4CF1-AD6C-3AAC30BB03D6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Food &amp; Drink, Tableware, Knife Or Fork, Pick Up From Metal Draining Board SND26927" ID="{28CAA33C-0180-409F-AB85-20D57AC0ED92}" ShortID="559277381">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{BCE26726-B499-4B70-8666-06C9B10C38D5}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Food &amp; Drink, Tableware, Knife Or Fork, Pick Up From Metal Draining Board SND26927" ID="{B63F9B5A-90BA-4465-96F6-288A779F85E4}">
+													<Language>SFX</Language>
+													<AudioFile>Food &amp; Drink, Tableware, Knife Or Fork, Pick Up From Metal Draining Board SND26927.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="903793539"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Food &amp; Drink, Tableware, Knife Or Fork, Pick Up From Metal Draining Board SND26927" ID="{B63F9B5A-90BA-4465-96F6-288A779F85E4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Tools, Hand, Hammer, Pick Up From Tool Box, Metal Impacts SND54601 2" ID="{19176F78-D79E-4466-B16E-F81F786BB56F}" ShortID="579280811">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Tools, Hand, Hammer, Pick Up From Tool Box, Metal Impacts SND54601 2" ID="{CC35B3EB-9DE7-43DE-8CE1-30617DA0FD82}">
+													<Language>SFX</Language>
+													<AudioFile>Tools, Hand, Hammer, Pick Up From Tool Box, Metal Impacts SND54601 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="184787192"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Tools, Hand, Hammer, Pick Up From Tool Box, Metal Impacts SND54601 2" ID="{CC35B3EB-9DE7-43DE-8CE1-30617DA0FD82}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="bomb" ID="{00F6FEF0-E03C-41AA-91D1-F82043E5FCD5}" ShortID="919892969">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{3F7E4745-911E-4BDE-80CD-B64B9550D569}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="328"/>
+															<Property Name="Min" Type="Real64" Value="-328"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Scifi, Weapon, Foley, Reload, Pick Up, Handling 01 SND44891" ID="{3C808A8C-BD55-435D-AC49-036772B2E533}" ShortID="720932426">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Scifi, Weapon, Foley, Reload, Pick Up, Handling 01 SND44891" ID="{BA6EACBD-EACD-4EEE-86B8-3EBED2B866D8}">
+													<Language>SFX</Language>
+													<AudioFile>Scifi, Weapon, Foley, Reload, Pick Up, Handling 01 SND44891.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="996682008"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Scifi, Weapon, Foley, Reload, Pick Up, Handling 01 SND44891" ID="{BA6EACBD-EACD-4EEE-86B8-3EBED2B866D8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Scifi, Weapon, Foley, Reload, Pick Up, Handling 01 SND44891 1" ID="{ED35961B-77BA-493E-9E31-B73F008E50A4}" ShortID="1006300051">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Scifi, Weapon, Foley, Reload, Pick Up, Handling 01 SND44891 1" ID="{B3986CE5-3138-4DF9-A02B-B7D9BE3B96B8}">
+													<Language>SFX</Language>
+													<AudioFile>Scifi, Weapon, Foley, Reload, Pick Up, Handling 01 SND44891 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="461754974"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Scifi, Weapon, Foley, Reload, Pick Up, Handling 01 SND44891 1" ID="{B3986CE5-3138-4DF9-A02B-B7D9BE3B96B8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Scifi, Weapon, Foley, Reload, Pick Up, Handling 01 SND44891 2" ID="{686849A8-A335-4B7C-8952-CB98B3052B5F}" ShortID="444256201">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Scifi, Weapon, Foley, Reload, Pick Up, Handling 01 SND44891 2" ID="{7216ACB6-4690-4DD1-839E-FEACE717BF1F}">
+													<Language>SFX</Language>
+													<AudioFile>Scifi, Weapon, Foley, Reload, Pick Up, Handling 01 SND44891 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="971344149"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Scifi, Weapon, Foley, Reload, Pick Up, Handling 01 SND44891 2" ID="{7216ACB6-4690-4DD1-839E-FEACE717BF1F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Cloth" ID="{3569FF25-A015-4287-A917-6541C00D36D5}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Glas" ID="{9352575C-1AB9-46BB-8E9B-C18694FCB12D}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Plastic" ID="{D603E4D4-9EFE-476D-BAEB-CFE8007AF657}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Metal" ID="{684AB4E0-C7BA-492F-B5DC-C4D2685A8D78}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="bomb" ID="{00F6FEF0-E03C-41AA-91D1-F82043E5FCD5}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Plastic" ID="{7EF9E145-FA72-4244-8742-BE63566ADB55}"/>
+										<ItemList>
+											<ItemRef Name="Plastic" ID="{D603E4D4-9EFE-476D-BAEB-CFE8007AF657}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="None" ID="{6A98514E-FC96-4D03-9E62-B4BCD89E9C96}"/>
+										<ItemList>
+											<ItemRef Name="Metal" ID="{684AB4E0-C7BA-492F-B5DC-C4D2685A8D78}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Cloth" ID="{24C2E27B-0B85-4BFD-A6B8-19E66FF6BE38}"/>
+										<ItemList>
+											<ItemRef Name="Cloth" ID="{3569FF25-A015-4287-A917-6541C00D36D5}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+					</ChildrenList>
+				</Folder>
+				<RandomSequenceContainer Name="Explosion" ID="{1A286A5A-C496-4775-B9B0-78781C9959F9}" ShortID="684438267">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{295ABB91-2223-49E3-9109-E7052F229DB3}">
+										<PropertyList>
+											<Property Name="Min" Type="Real64" Value="-909"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="ExplosionVariant1" ID="{2E33C25B-6961-430D-9712-CFF9E793785A}" ShortID="418959566">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B230ACCC-60D3-4C0F-ABF4-FB8DF467AD7C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1000"/>
+													<Property Name="Min" Type="Real64" Value="-1000"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Explosions, Real, Heavy Explosion, Huge Blasts, Debris SND122486" ID="{87908822-8026-415A-9DDB-4A1CC5A6DC30}" ShortID="439651060">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Explosions, Real, Heavy Explosion, Huge Blasts, Debris SND122486" ID="{AD3AA579-C06D-4BF8-89CF-21092011613B}">
+											<Language>SFX</Language>
+											<AudioFile>Explosions, Real, Heavy Explosion, Huge Blasts, Debris SND122486.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="824852784"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Explosions, Real, Heavy Explosion, Huge Blasts, Debris SND122486" ID="{AD3AA579-C06D-4BF8-89CF-21092011613B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Explosions, Designed, Underwater Explosion, Long, Massive, Dark 01 SND36335" ID="{D175ABBA-8D76-49B9-AAC2-6487B955CD52}" ShortID="887829766">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Explosions, Designed, Underwater Explosion, Long, Massive, Dark 01 SND36335" ID="{F957BC89-63AA-4922-8E44-87BED70E9ED1}">
+											<Language>SFX</Language>
+											<AudioFile>Explosions, Designed, Underwater Explosion, Long, Massive, Dark 01 SND36335.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="241093419"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Explosions, Designed, Underwater Explosion, Long, Massive, Dark 01 SND36335" ID="{F957BC89-63AA-4922-8E44-87BED70E9ED1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="ExplosionVariant2" ID="{141BE530-79D1-4512-A0FD-A11F108A2997}" ShortID="205771565">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{F94F81EB-C750-4B1F-8CE5-3CC6EC88B3FF}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1000"/>
+													<Property Name="Min" Type="Real64" Value="-1000"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Explosions, Real, Heavy Explosion, Huge Blasts, Debris SND122486 1" ID="{36233F71-9064-4263-B7BB-C7C042DA5340}" ShortID="61341188">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{AFCB44D0-17D9-44E9-9091-415C0FCD0A9F}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Explosions, Real, Heavy Explosion, Huge Blasts, Debris SND122486 1" ID="{7FEB653E-99F2-4914-89F4-9E8297E0C59E}">
+											<Language>SFX</Language>
+											<AudioFile>Explosions, Real, Heavy Explosion, Huge Blasts, Debris SND122486 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="823536295"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Explosions, Real, Heavy Explosion, Huge Blasts, Debris SND122486 1" ID="{7FEB653E-99F2-4914-89F4-9E8297E0C59E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Explosions, Real, Boom, Distant Explosion, Low, Muffled 02 SND46331" ID="{B0FB7946-DBFE-4EE6-B610-8691E923A128}" ShortID="54529349">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Explosions, Real, Boom, Distant Explosion, Low, Muffled 02 SND46331" ID="{EC2AC057-3463-41A7-86BD-0F8755AA9012}">
+											<Language>SFX</Language>
+											<AudioFile>Explosions, Real, Boom, Distant Explosion, Low, Muffled 02 SND46331.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="238823339"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Explosions, Real, Boom, Distant Explosion, Low, Muffled 02 SND46331" ID="{EC2AC057-3463-41A7-86BD-0F8755AA9012}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="ExplosionVariant3" ID="{B6D8F630-8BBE-4D97-9745-B40781DD2D87}" ShortID="255593105">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0222EBC8-3297-4855-AF23-C0EC7901A994}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="1000"/>
+													<Property Name="Min" Type="Real64" Value="-1000"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Explosions, Real, Heavy Explosion, Huge Blasts, Debris SND122486 3" ID="{45BA5796-543F-441C-B8FE-7C1214E0D171}" ShortID="666644896">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Explosions, Real, Heavy Explosion, Huge Blasts, Debris SND122486 3" ID="{2C8CB800-0429-4E22-9A32-0F06D5AD71D7}">
+											<Language>SFX</Language>
+											<AudioFile>Explosions, Real, Heavy Explosion, Huge Blasts, Debris SND122486 3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="125732724"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Explosions, Real, Heavy Explosion, Huge Blasts, Debris SND122486 3" ID="{2C8CB800-0429-4E22-9A32-0F06D5AD71D7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Explosions, Real, Deep Low SND5808" ID="{F7BE181D-138D-4203-A16B-320E4FF529AA}" ShortID="900447496">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Explosions, Real, Deep Low SND5808" ID="{BC9E3DDE-E16F-49CA-A34C-F30C7DE466AA}">
+											<Language>SFX</Language>
+											<AudioFile>Explosions, Real, Deep Low SND5808.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="480196096"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Explosions, Real, Deep Low SND5808" ID="{BC9E3DDE-E16F-49CA-A34C-F30C7DE466AA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<ActorMixer Name="Victory" ID="{8F78B8A6-80A0-4A46-9DD0-3631BCB9B4D1}" ShortID="383490047">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{E010F5B9-D101-477C-931A-F93CD2FC1BCD}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Cartoon, Musical, Orchestral, Trumpet, Vintage, Triumph, Victory SND11695 1" ID="{77225DD9-6A33-4B0F-8785-63AA26E1E269}" ShortID="817751385">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E4939D16-97FC-4C65-A83F-9EA27AAF4F29}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cartoon, Musical, Orchestral, Trumpet, Vintage, Triumph, Victory SND11695 1" ID="{E308CDD6-B875-47F7-BEF3-440D836C1749}">
+									<Language>SFX</Language>
+									<AudioFile>Cartoon, Musical, Orchestral, Trumpet, Vintage, Triumph, Victory SND11695 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="787551875"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cartoon, Musical, Orchestral, Trumpet, Vintage, Triumph, Victory SND11695 1" ID="{E308CDD6-B875-47F7-BEF3-440D836C1749}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="WrongTarget" ID="{925D37AF-0D17-46AC-9111-8A8AF2D96D4C}" ShortID="614149827">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{1C7EC664-55C2-4053-89FA-22546679E5D5}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="User Interface, Alert, Failure, Access Denied 01 SND57512" ID="{4783560C-D440-41DB-A05D-5498F293FAB2}" ShortID="1037339733">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="User Interface, Alert, Failure, Access Denied 01 SND57512" ID="{E2416C7B-4B45-445D-AE7A-2B53DE9D932A}">
+									<Language>SFX</Language>
+									<AudioFile>User Interface, Alert, Failure, Access Denied 01 SND57512.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="168313656"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="User Interface, Alert, Failure, Access Denied 01 SND57512" ID="{E2416C7B-4B45-445D-AE7A-2B53DE9D932A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="TargetDefused" ID="{88E1814D-E50D-4596-85A2-99AB8EED7401}" ShortID="752834522">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{35C1505A-4040-4985-A54C-441250667621}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="User Interface, Misc, Completions, Melodic, Success SND115458" ID="{F1D36748-4F62-4FCA-9327-9CD7642014B5}" ShortID="719980172">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{33B70BAF-DC25-46FE-A8CA-415E7FA770AD}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{C2174B14-24DF-46BA-8001-B5C653FD8F22}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{2EE334C2-71DC-412E-B77A-C845303E3529}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="User Interface, Misc, Completions, Melodic, Success SND115458" ID="{DD10C85B-3FE5-4D3F-9D73-B4643A70ACFB}">
+									<Language>SFX</Language>
+									<AudioFile>User Interface, Misc, Completions, Melodic, Success SND115458.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="527682480"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="User Interface, Misc, Completions, Melodic, Success SND115458" ID="{DD10C85B-3FE5-4D3F-9D73-B4643A70ACFB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

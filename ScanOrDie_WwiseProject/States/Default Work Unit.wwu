@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F12EFF18-3D0B-4E4C-864D-D3AF0E6B9D97}" SchemaVersion="110">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{F12EFF18-3D0B-4E4C-864D-D3AF0E6B9D97}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F12EFF18-3D0B-4E4C-864D-D3AF0E6B9D97}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="ObjectType" ID="{F3F3EEC2-0EBE-48B5-B81C-DF5B01992F6D}">
+					<ChildrenList>
+						<State Name="None" ID="{6A98514E-FC96-4D03-9E62-B4BCD89E9C96}"/>
+						<State Name="Cloth" ID="{24C2E27B-0B85-4BFD-A6B8-19E66FF6BE38}"/>
+						<State Name="Plastic" ID="{7EF9E145-FA72-4244-8742-BE63566ADB55}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

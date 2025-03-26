@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A58E7F95-66E4-468B-87C0-D97D7BC6A20D}" SchemaVersion="110">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{A58E7F95-66E4-468B-87C0-D97D7BC6A20D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A58E7F95-66E4-468B-87C0-D97D7BC6A20D}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="BeepSpeed" ID="{34B8E5F6-5176-4DF3-B0AA-FE13CE182710}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>
