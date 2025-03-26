@@ -10,7 +10,7 @@ public class Coursor : MonoBehaviour
     HandState handState = HandState.Scaning;
     public float Distance;
     
-    private Transform holdingTranform;
+    public Transform holdingTranform;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +23,6 @@ public class Coursor : MonoBehaviour
         
         if (handState == HandState.Scaning)
         {
-            
             if (!Input.GetMouseButton(0)) return;
             RaycastHit hitInfo;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo))
@@ -34,13 +33,14 @@ public class Coursor : MonoBehaviour
         }
         else
         {
-            if (!Input.GetMouseButton(0))
+            if (!Input.GetMouseButton(0)|| holdingTranform == null)
             {
                 handState = HandState.Scaning;
                 return;
             }
             Vector3 newpos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             newpos.z = 0;
+        
             holdingTranform.position = newpos;
         }
     }

@@ -10,12 +10,13 @@ public class Mover : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] Ease ease;
     [SerializeField] float duration;
+    
     // Start is called before the first frame update
     void Start()
     {
         Move();
     }
-
+    
     async void Move()
     {
         for (int i = 0; i < Crates.Count; i++)
