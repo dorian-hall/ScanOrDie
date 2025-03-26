@@ -115,9 +115,6 @@
 						<RandomSequenceContainer Name="BeepSequence" ID="{5FD984A1-BECF-4A94-9DDC-B852FA47A6CB}" ShortID="1029421088">
 							<PropertyList>
 								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-180</Value>
-									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{D97685C5-BC32-41EF-80AF-5B659E9D5F2C}"/>
@@ -127,6 +124,11 @@
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -259,13 +261,13 @@
 																<PointList>
 																	<Point>
 																		<XPos>0</XPos>
-																		<YPos>-317</YPos>
+																		<YPos>-2417</YPos>
 																		<Flags>5</Flags>
-																		<SegmentShape>Log1</SegmentShape>
+																		<SegmentShape>Exp1</SegmentShape>
 																	</Point>
 																	<Point>
 																		<XPos>100</XPos>
-																		<YPos>-22</YPos>
+																		<YPos>37</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
