@@ -38,6 +38,7 @@ public class Coursor : MonoBehaviour
                     Camera.main.ScreenToViewportPoint(Input.mousePosition));
                 if (newdistance < distance) Distance = newdistance;
             }
+            
         }
         else Distance = 1;
             
