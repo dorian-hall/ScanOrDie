@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 242853307379606841}
   - component: {fileID: 739675445403045071}
   - component: {fileID: 7636001776438908291}
-  - component: {fileID: 5873447591028431797}
   m_Layer: 6
   m_Name: Square
   m_TagString: Untagged
@@ -76,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.4862745, g: 0.13333336, b: 0.16165781, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -135,19 +134,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5873447591028431797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 329919752334144581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f38ef385e80994e87cab860361a469, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Defused: 0
 --- !u!1 &770711518405839546
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +236,7 @@ GameObject:
   - component: {fileID: 5201315189230984621}
   - component: {fileID: 2263657401432997328}
   - component: {fileID: 2053977200106073510}
+  - component: {fileID: 6165728348697037902}
   m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
@@ -372,6 +359,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6165728348697037902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2567371863289228519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f38ef385e80994e87cab860361a469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Defused: 0
 --- !u!1 &2711289587780886254
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,7 +715,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 0.12941179, g: 0.21969455, b: 0.48235294, a: 1}
   m_FlipX: 0
   m_FlipY: 0

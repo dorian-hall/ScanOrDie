@@ -25,17 +25,32 @@ public class Coursor : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        AudioManager.instance.ScanerDistence.SetValue(AudioManager.instance.gameObject,Distance);
+
+
         if (handState == HandState.Scaning)
         {
             float distance = float.MaxValue;
             foreach (var bomb in bombs)
             {
-                float newdistance = Vector2.Distance( Camera.main.WorldToViewportPoint(bomb.position),Camera.main.ScreenToViewportPoint(Input.mousePosition));
-                if(newdistance < distance) Distance = newdistance;
+                float newdistance = Vector2.Distance(Camera.main.WorldToViewportPoint(bomb.position),
+                    Camera.main.ScreenToViewportPoint(Input.mousePosition));
+                if (newdistance < distance) Distance = newdistance;
             }
+        }
+        else Distance = 1;
+            
+        AudioManager.instance.ScanerDistence.SetValue(AudioManager.instance.gameObject,Distance);
+    }
+
+    void Update()
+    {
+
+        
+        if (handState == HandState.Scaning)
+        {
+  
             Debug.Log(AudioManager.instance.ScanerDistence.GetValue(AudioManager.instance.gameObject));
             if (!Input.GetMouseButton(0)) return;
             RaycastHit hitInfo;
@@ -43,7 +58,6 @@ public class Coursor : MonoBehaviour
           
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo))
             {
-                Distance = 0;
                 holdingTranform = hitInfo.transform;
                 handState = HandState.Holding;
             } 
@@ -57,10 +71,13 @@ public class Coursor : MonoBehaviour
                 handState = HandState.Scaning;
                 return;
             }
+
+            Distance = 0;
             Vector3 newpos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             newpos.z = 0;
         
             holdingTranform.position = newpos;
         }
+        
     }
 }
