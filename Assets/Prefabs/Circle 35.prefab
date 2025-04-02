@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7647476332449210664}
   - component: {fileID: 6710042417237282440}
   - component: {fileID: 6232525377253138723}
-  - component: {fileID: 348373538275240425}
+  - component: {fileID: -4977799324267056174}
   m_Layer: 6
   m_Name: Circle 35
   m_TagString: Untagged
@@ -107,7 +107,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &348373538275240425
+--- !u!54 &-4977799324267056174
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,7 +123,7 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
