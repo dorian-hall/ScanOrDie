@@ -19,4 +19,9 @@ public class SceneManager : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
+    
+    public static void loadWinScene()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+    }
 }

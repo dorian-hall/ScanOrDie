@@ -10,10 +10,12 @@ public class Mover : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] Ease ease;
     [SerializeField] float duration;
+    public static Mover Instance;
     
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
         Move();
     }
     
@@ -25,6 +27,9 @@ public class Mover : MonoBehaviour
             await create.transform.DOMove(target.position, duration).SetEase(ease).AsyncWaitForCompletion();
             Destroy(create.gameObject);
         }
+        if (Coursor.Instance.bombs.Count == 0)SceneManager.loadWinScene();
+        if(Strikes.instance.strikeCount > 2)SceneManager.loadGameOverScene();
+        
     }
 
     private void OnTriggerStay(Collider other)

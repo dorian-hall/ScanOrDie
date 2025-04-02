@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Strikes : MonoBehaviour
 {
     [SerializeField] Image[] strikes;
-    int strikeCount = 0;
+    public int strikeCount = 0;
     public static Strikes instance;
     private void Start()
     {
@@ -15,7 +15,7 @@ public class Strikes : MonoBehaviour
 
     public bool CountStrike()
     {
-        strikes[strikeCount].color = Color.red;
+        if(strikeCount< strikes.Length) strikes[strikeCount].color = Color.red;
         strikeCount++;
         return strikeCount > strikes.Length-1;
     }
