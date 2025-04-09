@@ -14,8 +14,17 @@ public class Bomb : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (!Defused) AudioManager.instance.Explosion?.Post(AudioManager.instance.gameObject);
-        else AudioManager.instance.Defused?.Post(AudioManager.instance.gameObject);
+        if (!Defused)
+        {
+            AudioManager.instance.Explosion?.Post(AudioManager.instance.gameObject);
+            Strikes.instance.CountStrike();
+            Strikes.instance.CountStrike();
+        }
+        else
+        {
+            AudioManager.instance.Defused?.Post(AudioManager.instance.gameObject);
+   
+        }
         Coursor.Instance.bombs.Remove(transform);
     }
 }
